@@ -1,0 +1,19 @@
+# Local reference material, not ours to publish
+_reference/
+
+# Build output
+Source/**/bin/
+Source/**/obj/
+*.user
+.vs/
+.idea/
+
+# Textures extracted from RimWorld (Ludeon Studios) to draw the Workshop cards
+Art/WorkshopCards/_game_textures/
+
+# Game assets used only to draw the preview (they belong to Ludeon Studios)
+Art/Preview/icon_*.png
+Art/WorkshopCards/fonts/
+
+# Old draft of the preview
+Art/Preview/preview_2x.png

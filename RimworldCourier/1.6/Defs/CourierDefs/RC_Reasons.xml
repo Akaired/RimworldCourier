@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--
+    Why goods are shipped. label = job title (board, quest name), clause = end of the story
+    sentence: "{sender} is sending {cargo} to {destination}, ..., <clause>."
+    groups: cargo groups it fits (empty = any cargo; generic reasons are picked less often).
+    recipient: Any | SameFaction | OtherFaction.
+  -->
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_FamineRelief</defName>
+    <label>famine relief</label>
+    <clause>to help them through a poor harvest</clause>
+    <groups>
+      <li>RC_Food</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_WinterStores</defName>
+    <label>winter stores</label>
+    <clause>to fill their stores before the cold season</clause>
+    <groups>
+      <li>RC_Food</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_WeddingFeast</defName>
+    <label>wedding feast</label>
+    <clause>for a wedding feast that half the region is invited to</clause>
+    <groups>
+      <li>RC_Food</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_RefugeeAid</defName>
+    <label>refugee aid</label>
+    <clause>to feed refugees who have gathered at their gates</clause>
+    <groups>
+      <li>RC_Food</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_PaymentInKind</defName>
+    <label>payment in kind</label>
+    <clause>to pay off a debt in kind</clause>
+    <groups>
+      <li>RC_Food</li>
+    </groups>
+    <recipient>OtherFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_FriendshipGift</defName>
+    <label>friendship gift</label>
+    <clause>as a gesture of friendship between the two peoples</clause>
+    <groups>
+      <li>RC_Food</li>
+      <li>RC_Drugs</li>
+      <li>RC_Textiles</li>
+    </groups>
+    <recipient>OtherFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_GarrisonRations</defName>
+    <label>garrison rations</label>
+    <clause>to feed the garrison stationed there</clause>
+    <groups>
+      <li>RC_Food</li>
+    </groups>
+    <recipient>SameFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Charity</defName>
+    <label>charity</label>
+    <clause>as charity for the poorest families there</clause>
+    <groups>
+      <li>RC_Food</li>
+      <li>RC_Medicine</li>
+      <li>RC_Textiles</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_FuneralBanquet</defName>
+    <label>funeral banquet</label>
+    <clause>for the funeral banquet of a respected elder</clause>
+    <groups>
+      <li>RC_Food</li>
+      <li>RC_Drugs</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_PlagueOutbreak</defName>
+    <label>plague outbreak</label>
+    <clause>to fight an outbreak of plague</clause>
+    <groups>
+      <li>RC_Medicine</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_InfirmaryRestock</defName>
+    <label>infirmary restock</label>
+    <clause>to restock their infirmary after a raid</clause>
+    <groups>
+      <li>RC_Medicine</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_FieldHospital</defName>
+    <label>field hospital</label>
+    <clause>for the wounded of a recent skirmish</clause>
+    <groups>
+      <li>RC_Medicine</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_HealersRequest</defName>
+    <label>healer's request</label>
+    <clause>at the request of their healer, who has run out of supplies</clause>
+    <groups>
+      <li>RC_Medicine</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_DifficultBirths</defName>
+    <label>midwife supplies</label>
+    <clause>for a midwife expecting a season of difficult births</clause>
+    <groups>
+      <li>RC_Medicine</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Festival</defName>
+    <label>festival supplies</label>
+    <clause>for an upcoming festival</clause>
+    <groups>
+      <li>RC_Drugs</li>
+      <li>RC_Food</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_StandingOrder</defName>
+    <label>standing order</label>
+    <clause>to fill a standing order from a merchant there</clause>
+    <groups>
+      <li>RC_Drugs</li>
+      <li>RC_Manufactured</li>
+      <li>RC_Textiles</li>
+    </groups>
+    <recipient>OtherFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_DiscreetDelivery</defName>
+    <label>discreet delivery</label>
+    <clause>discreetly - nobody there wants to say what for</clause>
+    <groups>
+      <li>RC_Drugs</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_SoldiersRations</defName>
+    <label>soldiers' comforts</label>
+    <clause>to keep the spirits up among the troops stationed there</clause>
+    <groups>
+      <li>RC_Drugs</li>
+    </groups>
+    <recipient>SameFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_WinterClothes</defName>
+    <label>winter clothing</label>
+    <clause>so their tailors can make clothes for the winter</clause>
+    <groups>
+      <li>RC_Textiles</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_TentRepairs</defName>
+    <label>tent repairs</label>
+    <clause>to replace tents lost in a storm</clause>
+    <groups>
+      <li>RC_Textiles</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_TailorsWorkshop</defName>
+    <label>tailor's workshop</label>
+    <clause>for a tailor's workshop that ran out of cloth</clause>
+    <groups>
+      <li>RC_Textiles</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_RaidRepairs</defName>
+    <label>raid repairs</label>
+    <clause>to rebuild walls damaged in a raid</clause>
+    <groups>
+      <li>RC_RawResources</li>
+      <li>RC_Manufactured</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Construction</defName>
+    <label>construction supplies</label>
+    <clause>for a new building project</clause>
+    <groups>
+      <li>RC_RawResources</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_StormRepairs</defName>
+    <label>storm repairs</label>
+    <clause>to repair the damage of a violent storm</clause>
+    <groups>
+      <li>RC_RawResources</li>
+      <li>RC_Textiles</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_TradeAgreement</defName>
+    <label>trade agreement</label>
+    <clause>as part of a long-standing trade agreement</clause>
+    <groups>
+      <li>RC_RawResources</li>
+      <li>RC_Manufactured</li>
+      <li>RC_Textiles</li>
+      <li>RC_Food</li>
+    </groups>
+    <recipient>OtherFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_OutpostSupply</defName>
+    <label>outpost supply</label>
+    <clause>to supply a growing outpost</clause>
+    <groups>
+      <li>RC_RawResources</li>
+      <li>RC_Food</li>
+      <li>RC_Manufactured</li>
+    </groups>
+    <recipient>SameFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Monument</defName>
+    <label>monument</label>
+    <clause>for a monument to their founders</clause>
+    <groups>
+      <li>RC_RawResources</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_GeneratorRepair</defName>
+    <label>generator repair</label>
+    <clause>to repair a broken generator before the batteries run dry</clause>
+    <groups>
+      <li>RC_Manufactured</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_DefenseUpkeep</defName>
+    <label>defense upkeep</label>
+    <clause>to keep their turrets and defenses running</clause>
+    <groups>
+      <li>RC_Manufactured</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_WorkshopSupplies</defName>
+    <label>workshop supplies</label>
+    <clause>for their workshop</clause>
+    <groups>
+      <li>RC_Manufactured</li>
+      <li>RC_RawResources</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_MilitiaArms</defName>
+    <label>militia arms</label>
+    <clause>to arm the local militia</clause>
+    <groups>
+      <li>RC_Weapons</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ArmsReplacement</defName>
+    <label>arms replacement</label>
+    <clause>to replace weapons lost in a raid</clause>
+    <groups>
+      <li>RC_Weapons</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_DefensePact</defName>
+    <label>defense pact</label>
+    <clause>as part of a mutual defense pact</clause>
+    <groups>
+      <li>RC_Weapons</li>
+      <li>RC_Apparel</li>
+      <li>RC_Medicine</li>
+    </groups>
+    <recipient>OtherFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_HuntingSeason</defName>
+    <label>hunting season</label>
+    <clause>for the hunting season</clause>
+    <groups>
+      <li>RC_Weapons</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_GarrisonArms</defName>
+    <label>garrison arms</label>
+    <clause>to re-equip the garrison</clause>
+    <groups>
+      <li>RC_Weapons</li>
+      <li>RC_Apparel</li>
+    </groups>
+    <recipient>SameFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_DuelistsOrder</defName>
+    <label>duelist's order</label>
+    <clause>for a duelist who is very particular about their equipment</clause>
+    <groups>
+      <li>RC_Weapons</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_GuardUniforms</defName>
+    <label>guard uniforms</label>
+    <clause>to outfit their new guards</clause>
+    <groups>
+      <li>RC_Apparel</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_EscortGear</defName>
+    <label>escort gear</label>
+    <clause>for the escorts of their trade caravans</clause>
+    <groups>
+      <li>RC_Apparel</li>
+      <li>RC_Weapons</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ColdSeason</defName>
+    <label>cold season clothing</label>
+    <clause>before the cold season sets in</clause>
+    <groups>
+      <li>RC_Apparel</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Ceremony</defName>
+    <label>ceremonial attire</label>
+    <clause>for a ceremony where everyone must look their best</clause>
+    <groups>
+      <li>RC_Apparel</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Gift</defName>
+    <label>gift</label>
+    <clause>as a gift</clause>
+    <recipient>OtherFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_TradeContract</defName>
+    <label>trade contract</label>
+    <clause>to fulfil a trade contract</clause>
+    <recipient>OtherFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_OldDebt</defName>
+    <label>old debt</label>
+    <clause>to settle an old debt</clause>
+    <recipient>OtherFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Resupply</defName>
+    <label>resupply</label>
+    <clause>to resupply them</clause>
+    <recipient>SameFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Stockpile</defName>
+    <label>stockpile</label>
+    <clause>to build up their stockpile</clause>
+  </RimworldCourier.CourierReasonDef>
+
+  <!-- Organs -->
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Transplant</defName>
+    <label>transplant</label>
+    <clause>for a patient waiting for a transplant</clause>
+    <groups>
+      <li>RC_Organs</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_QuietSurgeon</defName>
+    <label>surgeon's order</label>
+    <clause>at the order of a surgeon who asks no questions</clause>
+    <groups>
+      <li>RC_Organs</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_LeadersHeir</defName>
+    <label>heir's surgery</label>
+    <clause>to save the life of their leader's heir</clause>
+    <groups>
+      <li>RC_Organs</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_MedicalResearch</defName>
+    <label>medical research</label>
+    <clause>for a doctor's medical research</clause>
+    <groups>
+      <li>RC_Organs</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_OrganBank</defName>
+    <label>organ bank</label>
+    <clause>to restock the organ bank of their hospital</clause>
+    <groups>
+      <li>RC_Organs</li>
+    </groups>
+    <recipient>SameFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_DebtInFlesh</defName>
+    <label>debt in flesh</label>
+    <clause>to settle a debt that could not be paid in silver</clause>
+    <groups>
+      <li>RC_Organs</li>
+    </groups>
+    <recipient>OtherFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <!-- Prosthetics, books, furniture -->
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_VeteransLimb</defName>
+    <label>veteran's new limb</label>
+    <clause>for a veteran who lost a limb defending the settlement</clause>
+    <groups>
+      <li>RC_Prosthetics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ClinicStock</defName>
+    <label>clinic stock</label>
+    <clause>to stock the clinic of their doctor</clause>
+    <groups>
+      <li>RC_Prosthetics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_MauledHunter</defName>
+    <label>mauled hunter</label>
+    <clause>for a hunter mauled by a thrumbo</clause>
+    <groups>
+      <li>RC_Prosthetics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Augmentation</defName>
+    <label>augmentation program</label>
+    <clause>for an augmentation program for their best fighters</clause>
+    <groups>
+      <li>RC_Prosthetics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_PitChampion</defName>
+    <label>pit champion</label>
+    <clause>for the champion of their fighting pit</clause>
+    <groups>
+      <li>RC_Prosthetics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_NewLibrary</defName>
+    <label>new library</label>
+    <clause>to stock a new library</clause>
+    <groups>
+      <li>RC_Books</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_VillageSchool</defName>
+    <label>village school</label>
+    <clause>for the village school</clause>
+    <groups>
+      <li>RC_Books</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ScholarsCommission</defName>
+    <label>scholar's commission</label>
+    <clause>for a scholar who ordered them months ago</clause>
+    <groups>
+      <li>RC_Books</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_BurnedLibrary</defName>
+    <label>burned library</label>
+    <clause>to replace a library lost in a fire</clause>
+    <groups>
+      <li>RC_Books</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_LongNights</defName>
+    <label>long nights</label>
+    <clause>so they have something to read through the long nights</clause>
+    <groups>
+      <li>RC_Books</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_NewHome</defName>
+    <label>new home</label>
+    <clause>to furnish a new house</clause>
+    <groups>
+      <li>RC_Furniture</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_WeddingGift</defName>
+    <label>wedding gift</label>
+    <clause>as a wedding gift for a young couple</clause>
+    <groups>
+      <li>RC_Furniture</li>
+      <li>RC_Books</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Refurnishing</defName>
+    <label>refurnishing</label>
+    <clause>to refurnish their homes after a fire</clause>
+    <groups>
+      <li>RC_Furniture</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_LeadersHall</defName>
+    <label>leader's hall</label>
+    <clause>for the leader's hall</clause>
+    <groups>
+      <li>RC_Furniture</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_NewInn</defName>
+    <label>new inn</label>
+    <clause>for a new inn on the caravan road</clause>
+    <groups>
+      <li>RC_Furniture</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+</Defs>

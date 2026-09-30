@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Only for jobs issued by the Empire (loaded with Royalty). -->
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ImperialTribute</defName>
+    <label>imperial tribute</label>
+    <clause>as tribute owed to the High Stellarch</clause>
+    <issuerFactionDefs>
+      <li>Empire</li>
+    </issuerFactionDefs>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_CountsCourt</defName>
+    <label>a Count's court</label>
+    <clause>for the court of a local Count</clause>
+    <issuerFactionDefs>
+      <li>Empire</li>
+    </issuerFactionDefs>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_NobleGift</defName>
+    <label>noble gift</label>
+    <clause>as a gift from one noble house to another</clause>
+    <issuerFactionDefs>
+      <li>Empire</li>
+    </issuerFactionDefs>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_LegionSupplies</defName>
+    <label>legion supplies</label>
+    <clause>to supply an imperial legion stationed there</clause>
+    <recipient>SameFaction</recipient>
+    <issuerFactionDefs>
+      <li>Empire</li>
+    </issuerFactionDefs>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ImperialDecree</defName>
+    <label>imperial decree</label>
+    <clause>by imperial decree - couriers are not told why</clause>
+    <issuerFactionDefs>
+      <li>Empire</li>
+    </issuerFactionDefs>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ImperialCourtesy</defName>
+    <label>imperial courtesy</label>
+    <clause>as a courtesy of the Empire to its neighbours</clause>
+    <recipient>OtherFaction</recipient>
+    <issuerFactionDefs>
+      <li>Empire</li>
+    </issuerFactionDefs>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_StellarchsGuard</defName>
+    <label>Stellarch's guard</label>
+    <clause>for the guard of a visiting Stellarch</clause>
+    <groups>
+      <li>RC_Weapons</li>
+      <li>RC_Apparel</li>
+      <li>RC_Prosthetics</li>
+    </groups>
+    <recipient>SameFaction</recipient>
+    <issuerFactionDefs>
+      <li>Empire</li>
+    </issuerFactionDefs>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_CourtBanquet</defName>
+    <label>court banquet</label>
+    <clause>for a banquet at a noble's court</clause>
+    <groups>
+      <li>RC_Food</li>
+      <li>RC_Drugs</li>
+      <li>RC_Furniture</li>
+    </groups>
+    <issuerFactionDefs>
+      <li>Empire</li>
+    </issuerFactionDefs>
+  </RimworldCourier.CourierReasonDef>
+</Defs>

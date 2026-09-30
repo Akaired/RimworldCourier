@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>RimworldCourier</AssemblyName>
+    <RootNamespace>RimworldCourier</RootNamespace>
+    <OutputPath>$(ModDir)\1.6\Assemblies\</OutputPath>
+    <OutDir>$(OutputPath)</OutDir>
+  </PropertyGroup>
+
+</Project>

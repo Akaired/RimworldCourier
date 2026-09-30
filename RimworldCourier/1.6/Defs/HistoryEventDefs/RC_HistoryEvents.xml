@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Used as the "reason" of goodwill changes; the label shows in the goodwill message. -->
+
+  <HistoryEventDef>
+    <defName>RC_CourierDeliveryCompleted</defName>
+    <label>courier delivery completed</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>RC_CourierContractFailed</defName>
+    <label>courier contract failed</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>RC_CourierCargoStolen</defName>
+    <label>courier cargo stolen</label>
+  </HistoryEventDef>
+
+</Defs>

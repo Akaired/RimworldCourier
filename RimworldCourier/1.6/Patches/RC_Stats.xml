@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- A courier crate weighs as much as the goods inside it (plus the crate). -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/StatDef[defName="Mass"]/parts</xpath>
+    <value>
+      <li Class="RimworldCourier.StatPart_CourierCrateContentsMass" />
+    </value>
+  </Operation>
+
+</Patch>

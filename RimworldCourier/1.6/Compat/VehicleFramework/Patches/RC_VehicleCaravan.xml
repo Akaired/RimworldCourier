@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Vehicle Framework uses its own world object for caravans with vehicles. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/WorldObjectDef[defName="VehicleCaravan"]/comps</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/WorldObjectDef[defName="VehicleCaravan"]/comps</xpath>
+      <value>
+        <li Class="RimworldCourier.WorldObjectCompProperties_CourierCaravan" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/WorldObjectDef[defName="VehicleCaravan"]</xpath>
+      <value>
+        <comps>
+          <li Class="RimworldCourier.WorldObjectCompProperties_CourierCaravan" />
+        </comps>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

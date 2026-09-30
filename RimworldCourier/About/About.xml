@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Rimworld Courier</name>
+  <author>Akaired</author>
+  <!-- Never change the packageId after the first public release: saves and other mods refer to it. -->
+  <packageId>Akaired.RimworldCourier</packageId>
+  <modVersion>1.0.0</modVersion>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <loadAfter>
+    <li>SmashPhil.VehicleFramework</li>
+  </loadAfter>
+  <description>Work as a courier. Friendly and neutral settlements post delivery jobs on a courier board: pick one up with a caravan, carry the sealed crate to its destination before the deadline and get paid in silver, sometimes goodwill, and chemfuel if you travel with vehicles or a shuttle.
+
+- Jobs always fit the caravan that looks at them: free capacity, travel time, and the transport it uses (on foot, Odyssey shuttle, Vehicle Framework vehicles).
+- Food, medicine, drugs, textiles, raw resources, components, weapons, apparel, organs, prosthetics and bionics, books and furniture, each with a reason for the shipment: famine relief, a wedding feast, arms for a militia, a plague outbreak...
+- DLC content when active: imperial contracts (Royalty, Yeoman title required, better pay and sometimes honor), hemogen, genepacks, embryos and subcores (Biotech), relics of other faiths (Ideology), tomes, shards, bioferrite and disruptor flare packs (Anomaly).
+- Every accepted job is a quest with a live deadline, and every step comes with a letter.
+- Cargo travels in sealed, refrigerated crates: it cannot be eaten, burned as fuel or sold by accident, and it never spoils.
+- In an emergency you can break the seal and use the goods, but the contract fails and the sender remembers. The penalty grows with the value of the cargo.
+- If the sender turns hostile while you are on the road, the job still stands: deliver it and you still get paid.
+- No jobs are offered for or to hostile factions.
+
+Optional support: Odyssey (passenger shuttle), Vehicle Framework.</description>
+</ModMetaData>

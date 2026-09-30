@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--
+    Root for the quests created by code when a courier job is accepted (Quest.MakeRaw).
+    The script itself never runs; a root node is still required because
+    Quest.CleanupQuestParts reads root.hideOnCleanup when the quest ends.
+  -->
+  <QuestScriptDef>
+    <defName>RC_CourierDelivery</defName>
+    <root Class="QuestNode_Sequence">
+      <nodes />
+    </root>
+    <!-- Never picked by the storyteller. -->
+    <randomlySelectable>false</randomlySelectable>
+    <affectedByPoints>false</affectedByPoints>
+    <sendAvailableLetter>false</sendAvailableLetter>
+    <!-- Visible in the Quests tab, kept in the history after it ends. -->
+    <defaultHidden>false</defaultHidden>
+    <hideOnCleanup>false</hideOnCleanup>
+  </QuestScriptDef>
+
+</Defs>

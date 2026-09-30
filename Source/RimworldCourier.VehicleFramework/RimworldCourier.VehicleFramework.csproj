@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Optional compatibility assembly. LoadFolders.xml only loads it when Vehicle Framework is
+    active, so the main mod never depends on Vehicles.dll.
+  -->
+  <PropertyGroup>
+    <AssemblyName>RimworldCourier.VehicleFramework</AssemblyName>
+    <RootNamespace>RimworldCourier.VehicleFramework</RootNamespace>
+    <OutputPath>$(ModDir)\1.6\Compat\VehicleFramework\Assemblies\</OutputPath>
+    <OutDir>$(OutputPath)</OutDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RimworldCourier\RimworldCourier.csproj">
+      <Private>false</Private>
+    </ProjectReference>
+    <Reference Include="Vehicles">
+      <HintPath>$(VehicleFrameworkDir)\1.6\Assemblies\Vehicles.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SmashTools">
+      <HintPath>$(VehicleFrameworkDir)\1.6\Assemblies\SmashTools.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

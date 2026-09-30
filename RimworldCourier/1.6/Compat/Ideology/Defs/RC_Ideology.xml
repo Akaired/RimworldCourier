@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--
+    Stand-ins for relics of other faiths, drawn with Ideology's relic textures. They have no ritual
+    function: real relics belong to an ideoligion precept and cannot be generated as freight.
+  -->
+  <ThingDef ParentName="ResourceBase" Name="RC_CourierRelicBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <description>A sacred object of another faith, entrusted to couriers. It holds no power of its own, but it means a great deal to those who believe in it.</description>
+    <stackLimit>1</stackLimit>
+    <tradeNeverStack>true</tradeNeverStack>
+    <useHitPoints>true</useHitPoints>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Beauty>2</Beauty>
+      <MarketValue>600</MarketValue>
+      <Flammability>0.2</Flammability>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RC_CourierRelicBase">
+    <defName>RC_Relic_Chalice</defName>
+    <label>sacred chalice</label>
+    <graphicData>
+      <texPath>Things/Item/Relic/RelicInertCup</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(205, 175, 110)</color>
+    </graphicData>
+    <statBases>
+      <Mass>1.5</Mass>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RC_CourierRelicBase">
+    <defName>RC_Relic_Pendant</defName>
+    <label>sacred pendant</label>
+    <graphicData>
+      <texPath>Things/Item/Relic/RelicInertPendant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(205, 175, 110)</color>
+    </graphicData>
+    <statBases>
+      <Mass>0.5</Mass>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RC_CourierRelicBase">
+    <defName>RC_Relic_Reliquary</defName>
+    <label>reliquary box</label>
+    <graphicData>
+      <texPath>Things/Item/Relic/RelicInertBox</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(205, 175, 110)</color>
+    </graphicData>
+    <statBases>
+      <Mass>2.5</Mass>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RC_CourierRelicBase">
+    <defName>RC_Relic_Tablet</defName>
+    <label>sacred tablet</label>
+    <graphicData>
+      <texPath>Things/Item/Relic/RelicInertTablet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(205, 175, 110)</color>
+    </graphicData>
+    <statBases>
+      <Mass>3</Mass>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RC_CourierRelicBase">
+    <defName>RC_Relic_Fragment</defName>
+    <label>sacred fragment</label>
+    <graphicData>
+      <texPath>Things/Item/Relic/RelicInertFragment</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(205, 175, 110)</color>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RC_CourierRelicBase">
+    <defName>RC_Relic_Hilt</defName>
+    <label>sacred hilt</label>
+    <graphicData>
+      <texPath>Things/Item/Relic/RelicInertSwordHandle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(205, 175, 110)</color>
+    </graphicData>
+    <statBases>
+      <Mass>1.5</Mass>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RC_CourierRelicBase">
+    <defName>RC_Relic_Ark</defName>
+    <label>sacred ark</label>
+    <graphicData>
+      <texPath>Things/Item/Relic/RelicInertArk</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(205, 175, 110)</color>
+    </graphicData>
+    <statBases>
+      <Mass>6</Mass>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RC_CourierRelicBase">
+    <defName>RC_Relic_Cube</defName>
+    <label>sacred cube</label>
+    <graphicData>
+      <texPath>Things/Item/Relic/RelicInertCube</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(205, 175, 110)</color>
+    </graphicData>
+    <statBases>
+      <Mass>2</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Relics</defName>
+    <label>relics</label>
+    <weight>3</weight>
+    <maxCount>1</maxCount>
+    <things>
+      <li>RC_Relic_Chalice</li>
+      <li>RC_Relic_Pendant</li>
+      <li>RC_Relic_Reliquary</li>
+      <li>RC_Relic_Tablet</li>
+      <li>RC_Relic_Fragment</li>
+      <li>RC_Relic_Hilt</li>
+      <li>RC_Relic_Ark</li>
+      <li>RC_Relic_Cube</li>
+    </things>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_NewTemple</defName>
+    <label>new temple</label>
+    <clause>to be enshrined in a new temple</clause>
+    <groups>
+      <li>RC_Relics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ReturnFromExile</defName>
+    <label>return from exile</label>
+    <clause>returned to the faithful after a long exile</clause>
+    <groups>
+      <li>RC_Relics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Pilgrimage</defName>
+    <label>pilgrimage</label>
+    <clause>for a pilgrimage festival</clause>
+    <groups>
+      <li>RC_Relics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_PeaceOffering</defName>
+    <label>peace offering</label>
+    <clause>as a peace offering between two faiths</clause>
+    <groups>
+      <li>RC_Relics</li>
+    </groups>
+    <recipient>OtherFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_HiddenFromRaiders</defName>
+    <label>hidden relic</label>
+    <clause>to hide it from raiders</clause>
+    <groups>
+      <li>RC_Relics</li>
+    </groups>
+    <recipient>SameFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ImportantRitual</defName>
+    <label>important ritual</label>
+    <clause>for an important ritual</clause>
+    <groups>
+      <li>RC_Relics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+</Defs>

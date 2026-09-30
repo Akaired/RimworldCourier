@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RC_CourierCrate</defName>
+    <label>courier crate</label>
+    <description>A sealed, refrigerated hard-shell case carrying someone else's goods. The seal keeps the contents fresh and untouched until they reach the recipient. Breaking it releases the goods but fails the delivery contract.</description>
+    <thingClass>RimworldCourier.CourierCrate</thingClass>
+    <graphicData>
+      <!-- Sealed hard-shell case. Source: Art/CourierCrate/hardcase.py -->
+      <texPath>Things/Item/RC_CourierCrate</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <tradeability>None</tradeability>
+    <tradeNeverStack>true</tradeNeverStack>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>false</burnableByRecipe>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <tickerType>Never</tickerType>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <statBases>
+      <!-- The crate alone. The goods' mass is added by StatPart_CourierCrateContentsMass. -->
+      <Mass>5</Mass>
+      <MaxHitPoints>150</MaxHitPoints>
+      <!-- Not the colony's property: keep it out of wealth. -->
+      <MarketValue>1</MarketValue>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <Beauty>-3</Beauty>
+    </statBases>
+  </ThingDef>
+
+</Defs>

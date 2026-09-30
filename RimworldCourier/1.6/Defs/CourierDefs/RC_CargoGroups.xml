@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--
+    Kinds of cargo. The board picks a group by weight, then a thing inside it (cheap goods more
+    often; every leaf category shares its weight, so the ~100 raw meats count like one item).
+    Things above the sending faction's tech level are never shipped.
+  -->
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Food</defName>
+    <label>food</label>
+    <weight>16</weight>
+    <categories>
+      <li>FoodMeals</li>
+      <li>FoodRaw</li>
+    </categories>
+    <excludedCategories>
+      <li>EggsFertilized</li>
+    </excludedCategories>
+    <excludedThings>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Meat_Twisted</li>
+    </excludedThings>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Medicine</defName>
+    <label>medicine</label>
+    <weight>9</weight>
+    <categories>
+      <li>Medicine</li>
+    </categories>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Drugs</defName>
+    <label>drugs</label>
+    <weight>7</weight>
+    <categories>
+      <li>Drugs</li>
+    </categories>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Textiles</defName>
+    <label>textiles</label>
+    <weight>9</weight>
+    <categories>
+      <li>Textiles</li>
+    </categories>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_RawResources</defName>
+    <label>raw resources</label>
+    <weight>16</weight>
+    <categories>
+      <li>ResourcesRaw</li>
+      <li>StoneBlocks</li>
+    </categories>
+    <!-- DLC items with a group of their own -->
+    <excludedThings>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+    </excludedThings>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Manufactured</defName>
+    <label>manufactured goods</label>
+    <weight>11</weight>
+    <categories>
+      <li>Manufactured</li>
+    </categories>
+    <!-- DLC items with a group of their own -->
+    <excludedThings>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Shard</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">SubcoreBasic</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">SubcoreRegular</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">SubcoreHigh</li>
+    </excludedThings>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Weapons</defName>
+    <label>weapons</label>
+    <weight>9</weight>
+    <allowStuff>true</allowStuff>
+    <maxCount>12</maxCount>
+    <categories>
+      <li>Weapons</li>
+    </categories>
+    <excludedCategories>
+      <li>WeaponsUnique</li>
+      <li>WeaponsMeleeBladelink</li>
+    </excludedCategories>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Apparel</defName>
+    <label>apparel</label>
+    <weight>9</weight>
+    <allowStuff>true</allowStuff>
+    <maxCount>12</maxCount>
+    <categories>
+      <li>Apparel</li>
+    </categories>
+    <excludedCategories>
+      <li>ApparelNoble</li>
+      <li>HeadgearNoble</li>
+    </excludedCategories>
+    <excludedThings>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Apparel_DisruptorFlarePack</li>
+    </excludedThings>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Organs</defName>
+    <label>organs</label>
+    <weight>5</weight>
+    <maxCount>4</maxCount>
+    <categories>
+      <li>BodyPartsNatural</li>
+    </categories>
+    <!-- Ideology: no organ shipments from/to factions whose beliefs forbid it. -->
+    <senderForbiddingPrecepts>
+      <li>OrganUse_Abhorrent</li>
+      <li>OrganUse_HorribleNoSell</li>
+    </senderForbiddingPrecepts>
+    <recipientForbiddingPrecepts>
+      <li>OrganUse_Abhorrent</li>
+      <li>OrganUse_HorribleNoSell</li>
+      <li>OrganUse_HorribleSellOK</li>
+    </recipientForbiddingPrecepts>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Prosthetics</defName>
+    <label>prosthetics and bionics</label>
+    <weight>6</weight>
+    <maxCount>4</maxCount>
+    <categories>
+      <li>BodyPartsSimple</li>
+      <li>BodyPartsProsthetic</li>
+      <li>BodyPartsBionic</li>
+      <li>BodyPartsUltra</li>
+    </categories>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Books</defName>
+    <label>books</label>
+    <weight>6</weight>
+    <maxCount>8</maxCount>
+    <categories>
+      <li>Books</li>
+    </categories>
+    <excludedThings>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Tome</li>
+    </excludedThings>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <!-- Furniture travels minified inside the crate. -->
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Furniture</defName>
+    <label>furniture</label>
+    <weight>7</weight>
+    <maxCount>3</maxCount>
+    <minified>true</minified>
+    <allowStuff>true</allowStuff>
+    <categories>
+      <li>BuildingsFurniture</li>
+    </categories>
+  </RimworldCourier.CourierCargoGroupDef>
+
+</Defs>

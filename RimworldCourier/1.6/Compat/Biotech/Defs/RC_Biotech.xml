@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Biotech cargo (loaded with Biotech). -->
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Hemogen</defName>
+    <label>hemogen</label>
+    <weight>4</weight>
+    <maxCount>40</maxCount>
+    <things>
+      <li>HemogenPack</li>
+    </things>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Genetics</defName>
+    <label>genetic material</label>
+    <weight>4</weight>
+    <maxCount>6</maxCount>
+    <things>
+      <li>Genepack</li>
+      <li>HumanEmbryo</li>
+      <li>HumanOvum</li>
+    </things>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Subcores</defName>
+    <label>mechanoid subcores</label>
+    <weight>3</weight>
+    <maxCount>4</maxCount>
+    <things>
+      <li>SubcoreBasic</li>
+      <li>SubcoreRegular</li>
+      <li>SubcoreHigh</li>
+    </things>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_BloodBank</defName>
+    <label>blood bank</label>
+    <clause>to restock their blood bank</clause>
+    <groups>
+      <li>RC_Hemogen</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_SanguophageGuest</defName>
+    <label>sanguophage guest</label>
+    <clause>for a sanguophage guest who must not go hungry</clause>
+    <groups>
+      <li>RC_Hemogen</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_SurgeryReserves</defName>
+    <label>surgery reserves</label>
+    <clause>for surgeries after heavy blood loss</clause>
+    <groups>
+      <li>RC_Hemogen</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_QuietFamily</defName>
+    <label>quiet family</label>
+    <clause>for a hemogenic family living quietly among them</clause>
+    <groups>
+      <li>RC_Hemogen</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_GeneticsLab</defName>
+    <label>genetics laboratory</label>
+    <clause>for their genetics laboratory</clause>
+    <groups>
+      <li>RC_Genetics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_DyingBloodline</defName>
+    <label>dying bloodline</label>
+    <clause>to preserve a bloodline that is dying out</clause>
+    <groups>
+      <li>RC_Genetics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ChildlessCouple</defName>
+    <label>childless couple</label>
+    <clause>for a couple who cannot have children</clause>
+    <groups>
+      <li>RC_Genetics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_XenotypeProject</defName>
+    <label>xenotype project</label>
+    <clause>for a xenotype research project</clause>
+    <groups>
+      <li>RC_Genetics</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_GeneTrade</defName>
+    <label>gene trade</label>
+    <clause>as part of a gene trading agreement</clause>
+    <groups>
+      <li>RC_Genetics</li>
+    </groups>
+    <recipient>OtherFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_MechanitorWorkshop</defName>
+    <label>mechanitor's workshop</label>
+    <clause>for a mechanitor's workshop</clause>
+    <groups>
+      <li>RC_Subcores</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_MechGuards</defName>
+    <label>mechanoid guards</label>
+    <clause>to build mechanoid guards for the settlement</clause>
+    <groups>
+      <li>RC_Subcores</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ResearchCluster</defName>
+    <label>research cluster</label>
+    <clause>for a research cluster</clause>
+    <groups>
+      <li>RC_Subcores</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+</Defs>

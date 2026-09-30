@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Anomaly cargo (loaded with Anomaly). -->
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_DarkStudies</defName>
+    <label>occult items</label>
+    <weight>3</weight>
+    <maxCount>4</maxCount>
+    <things>
+      <li>Tome</li>
+      <li>Shard</li>
+    </things>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_Bioferrite</defName>
+    <label>bioferrite</label>
+    <weight>3</weight>
+    <things>
+      <li>Bioferrite</li>
+    </things>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierCargoGroupDef>
+    <defName>RC_DarkDefense</defName>
+    <label>disruptor flare packs</label>
+    <weight>2</weight>
+    <maxCount>6</maxCount>
+    <things>
+      <li>Apparel_DisruptorFlarePack</li>
+    </things>
+  </RimworldCourier.CourierCargoGroupDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_VoidResearch</defName>
+    <label>void research</label>
+    <clause>for a research team studying the void</clause>
+    <groups>
+      <li>RC_DarkStudies</li>
+      <li>RC_Bioferrite</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_OccultCircle</defName>
+    <label>occult circle</label>
+    <clause>for an occult circle that meets at night</clause>
+    <groups>
+      <li>RC_DarkStudies</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_SafeDestruction</defName>
+    <label>safe destruction</label>
+    <clause>so it can be destroyed where it can do no harm</clause>
+    <groups>
+      <li>RC_DarkStudies</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ForbiddenCollector</defName>
+    <label>forbidden collection</label>
+    <clause>for a collector of forbidden things</clause>
+    <groups>
+      <li>RC_DarkStudies</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_Containment</defName>
+    <label>containment</label>
+    <clause>to reinforce their containment facility</clause>
+    <groups>
+      <li>RC_Bioferrite</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_BioferriteSmith</defName>
+    <label>bioferrite smith</label>
+    <clause>for a smith who works bioferrite</clause>
+    <groups>
+      <li>RC_Bioferrite</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_AgainstTheDark</defName>
+    <label>against the dark</label>
+    <clause>to protect them from the things that come out at night</clause>
+    <groups>
+      <li>RC_DarkDefense</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_ShamblerAttacks</defName>
+    <label>shambler attacks</label>
+    <clause>after a string of shambler attacks</clause>
+    <groups>
+      <li>RC_DarkDefense</li>
+    </groups>
+  </RimworldCourier.CourierReasonDef>
+
+  <RimworldCourier.CourierReasonDef>
+    <defName>RC_Reason_NightWatch</defName>
+    <label>night watch</label>
+    <clause>for the night watch</clause>
+    <groups>
+      <li>RC_DarkDefense</li>
+    </groups>
+    <recipient>SameFaction</recipient>
+  </RimworldCourier.CourierReasonDef>
+</Defs>

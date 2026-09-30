@@ -1,0 +1,52 @@
+<Project>
+  <!--
+    Shared build settings for every Rimworld Courier assembly.
+
+    Paths default to a Steam library on D:. Override any of them on the command line, e.g.
+      dotnet build -c Release -p:RimWorldDir="E:\Games\RimWorld"
+    The mod references the game's own DLLs directly (RimWorldWin64_Data\Managed), so the
+    build needs no NuGet packages and no .NET Framework targeting pack.
+  -->
+  <PropertyGroup>
+    <RimWorldDir Condition="'$(RimWorldDir)' == ''">D:\SteamLibrary\steamapps\common\RimWorld</RimWorldDir>
+    <RimWorldManagedDir Condition="'$(RimWorldManagedDir)' == ''">$(RimWorldDir)\RimWorldWin64_Data\Managed</RimWorldManagedDir>
+    <WorkshopDir Condition="'$(WorkshopDir)' == ''">D:\SteamLibrary\steamapps\workshop\content\294100</WorkshopDir>
+    <VehicleFrameworkDir Condition="'$(VehicleFrameworkDir)' == ''">$(WorkshopDir)\3014915404</VehicleFrameworkDir>
+
+    <!-- The mod folder that RimWorld loads (copy or junction it into RimWorld\Mods). -->
+    <ModDir>$(MSBuildThisFileDirectory)..\RimworldCourier</ModDir>
+
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>10</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+
+    <!-- Compile against the game's Mono profile instead of a .NET Framework targeting pack. -->
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <AutomaticallyUseReferenceAssemblyPackages>false</AutomaticallyUseReferenceAssemblyPackages>
+    <NoStdLib>true</NoStdLib>
+    <NoCompilerStandardLib>true</NoCompilerStandardLib>
+    <FrameworkPathOverride>$(RimWorldManagedDir)</FrameworkPathOverride>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="mscorlib"><HintPath>$(RimWorldManagedDir)\mscorlib.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="netstandard"><HintPath>$(RimWorldManagedDir)\netstandard.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System"><HintPath>$(RimWorldManagedDir)\System.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Core"><HintPath>$(RimWorldManagedDir)\System.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Xml"><HintPath>$(RimWorldManagedDir)\System.Xml.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Xml.Linq"><HintPath>$(RimWorldManagedDir)\System.Xml.Linq.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(RimWorldManagedDir)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(RimWorldManagedDir)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(RimWorldManagedDir)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(RimWorldManagedDir)\UnityEngine.IMGUIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(RimWorldManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

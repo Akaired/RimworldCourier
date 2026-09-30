@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Courier board + hand-over command on every settlement (same mechanism as vanilla trade requests). -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/WorldObjectDef[defName="Settlement"]/comps</xpath>
+    <value>
+      <li Class="RimworldCourier.WorldObjectCompProperties_CourierBoard" />
+    </value>
+  </Operation>
+
+  <!-- "Break seal" command on player caravans. The vanilla Caravan def has no comps list today;
+       the conditional also works if a future update or another mod adds one. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/WorldObjectDef[defName="Caravan"]/comps</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/WorldObjectDef[defName="Caravan"]/comps</xpath>
+      <value>
+        <li Class="RimworldCourier.WorldObjectCompProperties_CourierCaravan" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/WorldObjectDef[defName="Caravan"]</xpath>
+      <value>
+        <comps>
+          <li Class="RimworldCourier.WorldObjectCompProperties_CourierCaravan" />
+        </comps>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

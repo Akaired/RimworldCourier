@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <RC_ModName>Rimworld Courier</RC_ModName>
+
+  <!-- Board -->
+  <RC_CommandBoard>Courier board</RC_CommandBoard>
+  <RC_CommandBoardDesc>See which delivery jobs {0} is offering to couriers. Jobs are picked to fit this caravan's capacity, speed and means of transport. New jobs are posted between visits.</RC_CommandBoardDesc>
+  <RC_BoardTitle>Courier board - {0}</RC_BoardTitle>
+  <RC_BoardSubtitle>{0} | Transport: {1} | Free capacity: {2}</RC_BoardSubtitle>
+  <RC_BoardImperial>Imperial contracts: +{0} pay, sometimes honor</RC_BoardImperial>
+  <RC_Transport_OnFoot>on foot</RC_Transport_OnFoot>
+  <RC_Transport_Shuttle>shuttle</RC_Transport_Shuttle>
+  <RC_Transport_GroundVehicles>vehicles</RC_Transport_GroundVehicles>
+  <RC_Transport_Aircraft>aircraft</RC_Transport_Aircraft>
+
+  <RC_Board_NoCapacity>This caravan has no room left for cargo.</RC_Board_NoCapacity>
+  <RC_Board_NoDestinations>No friendly or neutral settlement is within reach of this caravan.</RC_Board_NoDestinations>
+  <RC_Board_NoCargo>This settlement has nothing to ship right now.</RC_Board_NoCargo>
+  <RC_Board_NoFeasible>No delivery job this caravan could complete in time.</RC_Board_NoFeasible>
+  <RC_Board_ComeBackLater>No more jobs for now. New jobs are posted between visits: leave and come back later.</RC_Board_ComeBackLater>
+  <RC_EmpireRequiresTitle>The Empire only hires couriers of standing: this caravan needs a colonist with the title of {0} or higher in {1}.</RC_EmpireRequiresTitle>
+
+  <RC_OfferCargoDetails>{0}, worth {1}</RC_OfferCargoDetails>
+  <RC_OfferTo>To: {0}</RC_OfferTo>
+  <!-- {0} and {1} already include the unit ("2.4 days"). -->
+  <RC_OfferTiming>Travel ~{0}, deadline {1}</RC_OfferTiming>
+  <RC_OfferFoodWarning>Not enough food for the trip</RC_OfferFoodWarning>
+  <RC_Accept>Accept</RC_Accept>
+  <RC_Accept_NotHere>The caravan is no longer at this settlement.</RC_Accept_NotHere>
+  <RC_Accept_Taken>Someone has already taken this job.</RC_Accept_Taken>
+  <RC_Accept_DestinationInvalid>The destination is no longer valid.</RC_Accept_DestinationInvalid>
+  <RC_Accept_TooHeavy>Too heavy: the cargo weighs {0} but the caravan can only take {1} more.</RC_Accept_TooHeavy>
+
+  <RC_RewardSilver>{0} silver</RC_RewardSilver>
+  <RC_RewardChemfuel>{0} chemfuel</RC_RewardChemfuel>
+  <RC_RewardGoodwill>{0} goodwill with {1}</RC_RewardGoodwill>
+  <RC_RewardHonor>{0} honor</RC_RewardHonor>
+  <RC_RewardHonorFor>{0} honor for {1}</RC_RewardHonorFor>
+
+  <RC_TipReward>Payment on delivery: {0}</RC_TipReward>
+  <RC_TipDistance>Distance: {0} tiles</RC_TipDistance>
+  <RC_TipTravel>Estimated travel time: {0}</RC_TipTravel>
+  <RC_TipDeadline>Deadline: {0} from acceptance</RC_TipDeadline>
+  <RC_TipSealed>The goods travel in a sealed, refrigerated crate: they cannot be eaten, burned as fuel or sold by accident, and they do not spoil.</RC_TipSealed>
+  <RC_TipFailure>Failure costs goodwill with the sender: {0} if you break the seal or miss the deadline, {1} if the cargo is destroyed.</RC_TipFailure>
+
+  <!-- Crate -->
+  <RC_CrateLabel>courier crate ({0})</RC_CrateLabel>
+  <RC_CrateEmpty>empty</RC_CrateEmpty>
+  <RC_CrateContents>Contents</RC_CrateContents>
+  <RC_CrateDestination>Destination</RC_CrateDestination>
+  <RC_StatContentsMass>Sealed contents</RC_StatContentsMass>
+
+  <RC_StatusActive>Deliver to {0} ({1}) within {2}</RC_StatusActive>
+  <RC_StatusReturning>Return to any settlement of {0} within {1}</RC_StatusReturning>
+  <RC_StatusCompleted>Delivered</RC_StatusCompleted>
+  <RC_StatusReturned>Returned to the sender</RC_StatusReturned>
+  <RC_StatusFailed>Contract failed</RC_StatusFailed>
+  <RC_StatusVoided>Contract void</RC_StatusVoided>
+
+  <!-- Commands -->
+  <RC_CommandDeliver>Deliver {0}</RC_CommandDeliver>
+  <RC_CommandDeliverDesc>Hand the sealed crate over to {0} and collect the payment: {1}.</RC_CommandDeliverDesc>
+  <RC_CommandReturn>Return {0}</RC_CommandReturn>
+  <RC_CommandReturnDesc>The delivery could not be completed. Hand the sealed crate back to {0}: no payment, no penalty.</RC_CommandReturnDesc>
+  <RC_CommandBreakSeal>Break seal</RC_CommandBreakSeal>
+  <RC_CommandBreakSealOf>Break seal: {0}</RC_CommandBreakSealOf>
+  <RC_CommandBreakSealDesc>Emergency use of the cargo. The goods become yours to use, but the delivery contract fails immediately.</RC_CommandBreakSealDesc>
+  <RC_ConfirmBreakSeal>Break the seal on {0}?\n\nThe contract with {1} fails immediately and you lose {2} goodwill with them. This cannot be undone.</RC_ConfirmBreakSeal>
+  <RC_ConfirmBreakSealNoContract>Open this crate of {0}? It is no longer bound to a delivery contract.</RC_ConfirmBreakSealNoContract>
+
+  <!-- Quest -->
+  <RC_QuestName>Courier: {0} to {1}</RC_QuestName>
+  <RC_QuestDescription>{1}\n\n{0} has hired you as their courier.\n\nCargo: {2} ({3}, worth {4}), sealed in a refrigerated courier crate.\nDestination: {5} ({6}).\nPayment on delivery: {7}.\n\nTake the crate to {5} and use the "Deliver" command there. If the seal is broken or the deadline passes, the contract fails and {0} will be displeased (up to -{8} goodwill).</RC_QuestDescription>
+  <RC_QuestDescriptionReturning>Update: the delivery can no longer be completed. Return the sealed crate to any settlement of {0} to close the contract without a penalty.</RC_QuestDescriptionReturning>
+  <RC_Story_OtherFaction>{0} is sending {1} to {2}, a settlement of {3}, {4}.</RC_Story_OtherFaction>
+  <RC_Story_SameFaction>{0} is sending {1} to {2}, one of their own settlements, {4}.</RC_Story_SameFaction>
+  <RC_Story_DefaultClause>as part of a regular shipment</RC_Story_DefaultClause>
+  <RC_QuestExpiryDeliver>Deliver within {0}</RC_QuestExpiryDeliver>
+  <RC_QuestExpiryReturn>Return within {0}</RC_QuestExpiryReturn>
+  <RC_QuestDeadlineOn>Deadline: {0}</RC_QuestDeadlineOn>
+  <RC_AlertDeadlineLabel>Courier deadline: {0}</RC_AlertDeadlineLabel>
+  <RC_AlertDeadlineText>{0}\n\n{1}</RC_AlertDeadlineText>
+
+  <!-- Letters -->
+  <RC_LetterAcceptedLabel>Courier job accepted</RC_LetterAcceptedLabel>
+  <RC_LetterAcceptedText>{1}\n\n{0} took the job.\n\nCargo: {2} ({3}), in a sealed crate.\nDeliver to: {4} ({5}).\nDeadline: {6} (estimated travel time: {7}).\nPayment on delivery: {8}.\n\nThe destination is marked in the Quests tab. Break the seal only in an emergency: the contract would fail.</RC_LetterAcceptedText>
+  <RC_LetterCompletedLabel>Courier job completed</RC_LetterCompletedLabel>
+  <RC_LetterCompletedText>{0} delivered {1} to {2}.\n\nPayment received: {3}.</RC_LetterCompletedText>
+  <RC_LetterReturnedLabel>Courier cargo returned</RC_LetterReturnedLabel>
+  <RC_LetterReturnedText>{0} was returned to {1}. The contract is closed with no penalty.</RC_LetterReturnedText>
+  <RC_LetterVoidedLabel>Courier contract void</RC_LetterVoidedLabel>
+  <RC_LetterVoidedText>The courier contract for {0} is void: {1} no longer exists, so there is nobody left to deliver for. The crate is yours to keep or open.</RC_LetterVoidedText>
+
+  <!-- {0} sender, {1} cargo, {2} destination, {3} destination faction, {4} goodwill penalty, {5} time left -->
+  <RC_LetterClientHostileLabel>Courier client hostile</RC_LetterClientHostileLabel>
+  <RC_LetterClientHostileDeliver>{0} is now hostile to you, but the courier contract for {1} still stands.\n\nYou can still deliver the crate to {2} ({3}) within {5} and collect the payment. If the seal is broken or the deadline passes, the contract fails and relations with {0} get worse (-{4} goodwill).</RC_LetterClientHostileDeliver>
+  <RC_LetterClientHostileWait>{0} is now hostile to you, but the courier contract for {1} still stands.\n\n{2} belongs to {0} too: you can only deliver the crate if relations improve within {5}. If the seal is broken or the deadline passes, the contract fails and relations with {0} get worse (-{4} goodwill).</RC_LetterClientHostileWait>
+  <RC_LetterClientHostileReturn>{0} is now hostile to you, but they still expect their cargo back ({1}).\n\nYou can only return the crate to one of their settlements if relations improve within {5}. If the seal is broken or the deadline passes, the contract fails and relations with {0} get worse (-{4} goodwill).</RC_LetterClientHostileReturn>
+
+  <RC_LetterFailedLabel>Courier contract failed</RC_LetterFailedLabel>
+  <RC_LetterFailedText>The delivery of {0} for {1} has failed: {2}\n\nGoodwill with {1}: -{3}.</RC_LetterFailedText>
+  <RC_FailReason_Expired>the deadline passed before the cargo was delivered.</RC_FailReason_Expired>
+  <RC_FailReason_SealBroken>the seal on the crate was broken.</RC_FailReason_SealBroken>
+  <RC_FailReason_CargoLost>the crate was lost or destroyed.</RC_FailReason_CargoLost>
+  <RC_FailReason_NotReturned>the cargo was not returned in time.</RC_FailReason_NotReturned>
+
+  <RC_LetterReturnLabel>Courier delivery impossible</RC_LetterReturnLabel>
+  <RC_LetterReturnText>The delivery of {0} to {1} cannot be completed: {2}\n\nReturn the sealed crate to any settlement of {3} within {4} to close the contract without a penalty.</RC_LetterReturnText>
+  <RC_LetterReturnHostileText>The delivery of {0} to {1} cannot be completed: {2}\n\nThe cargo must go back to {3}, but they are hostile to you: you can only return it to one of their settlements if relations improve within {4}. If the seal is broken or the deadline passes, the contract fails and relations with {3} get worse (-{5} goodwill).</RC_LetterReturnHostileText>
+  <RC_ReturnWhy_Gone>the recipient no longer exists.</RC_ReturnWhy_Gone>
+  <RC_ReturnWhy_HostileToYou>{0} is now hostile to you.</RC_ReturnWhy_HostileToYou>
+  <RC_ReturnWhy_HostileToIssuer>{0} is now hostile to {1}.</RC_ReturnWhy_HostileToIssuer>
+
+  <!-- Settings -->
+  <RC_Settings_Board>Courier board</RC_Settings_Board>
+  <RC_Settings_MinJobs>Minimum jobs per board: {0}</RC_Settings_MinJobs>
+  <RC_Settings_MaxJobs>Maximum jobs per board: {0}</RC_Settings_MaxJobs>
+  <RC_Settings_RefreshDays>Whole board renewed (on the next visit) every: {0} days</RC_Settings_RefreshDays>
+  <RC_Settings_RestockHours>Accepted jobs are replaced on a later visit, after at least: {0} hours</RC_Settings_RestockHours>
+  <RC_Settings_Feasibility>Feasibility</RC_Settings_Feasibility>
+  <RC_Settings_CargoFraction>Largest cargo, as a share of free capacity: {0}</RC_Settings_CargoFraction>
+  <RC_Settings_DeadlineSlack>Deadline = travel time x {0}</RC_Settings_DeadlineSlack>
+  <RC_Settings_MaxTravelDays>Longest trip offered: {0} days</RC_Settings_MaxTravelDays>
+  <RC_Settings_Economy>Economy</RC_Settings_Economy>
+  <RC_Settings_PayMultiplier>Pay multiplier: {0}</RC_Settings_PayMultiplier>
+  <RC_Settings_MaxCargoValue>Highest cargo value: {0} silver</RC_Settings_MaxCargoValue>
+  <RC_Settings_Failure>Failure</RC_Settings_Failure>
+  <RC_Settings_FailureBase>Base goodwill penalty: {0}</RC_Settings_FailureBase>
+  <RC_Settings_FailurePerSilver>Extra -1 goodwill per {0} silver of cargo value</RC_Settings_FailurePerSilver>
+  <RC_Settings_ReturnGrace>Time to return undeliverable cargo: {0} days</RC_Settings_ReturnGrace>
+  <RC_Settings_Reset>Reset to defaults</RC_Settings_Reset>
+
+</LanguageData>

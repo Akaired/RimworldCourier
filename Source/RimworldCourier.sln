@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimworldCourier", "RimworldCourier\RimworldCourier.csproj", "{45A61BEE-78A3-46D7-A2E5-9E25F3958851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimworldCourier.VehicleFramework", "RimworldCourier.VehicleFramework\RimworldCourier.VehicleFramework.csproj", "{95D3ACC6-42E2-4087-8D8A-9277FF9D9356}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45A61BEE-78A3-46D7-A2E5-9E25F3958851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A61BEE-78A3-46D7-A2E5-9E25F3958851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A61BEE-78A3-46D7-A2E5-9E25F3958851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A61BEE-78A3-46D7-A2E5-9E25F3958851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D3ACC6-42E2-4087-8D8A-9277FF9D9356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D3ACC6-42E2-4087-8D8A-9277FF9D9356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D3ACC6-42E2-4087-8D8A-9277FF9D9356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D3ACC6-42E2-4087-8D8A-9277FF9D9356}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
